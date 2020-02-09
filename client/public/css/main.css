@@ -1,0 +1,19 @@
+body {
+  height: 100vh;
+  margin: 0;
+  color: #007759;
+  font-family: 'Palatino';
+  background-color: #F4E8C1;
+}
+
+.bucket_list{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 40px 10px;
+}
+
+form {
+
+  padding: 0px 100px;
+
+}
