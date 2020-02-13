@@ -21,9 +21,9 @@ db.activities.insertMany([
     isDone: false
   },
   {
-    description: "Swim the Marathon Des Sables",
-    location: "Sahara Desert, Morocco",
-    type: "Sport",
+    description: "Swim Loch Ness",
+    location: "Loch Ness, Scotland",
+    type: "marine",
     isDone: false
   }
 ]);

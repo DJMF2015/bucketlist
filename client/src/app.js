@@ -4,6 +4,8 @@ const ActivityFormView = require('./views/activity_form_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Script loaded");
+
+
   const activityForm = document.querySelector('form#activities-form');
   const activityFormView = new ActivityFormView(activityForm);
   activityFormView.bindEvents();
@@ -13,6 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   activityGridView.bindEvents();
 
   const bucketItem = new BucketItem();
+  bucketItem.getData();//fetch our data from backend
   bucketItem.bindEvents();
-  bucketItem.getData();
 });

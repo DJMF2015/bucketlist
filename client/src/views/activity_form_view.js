@@ -13,20 +13,19 @@ ActivityFormView.prototype.bindEvents = function () {
 
 ActivityFormView.prototype.submitForm = function(event) {
   event.preventDefault();
-  const newActivity = this.createActivity(event.target);//dom elemnt
+  const newActivity = this.createNewActivity(event.target);//dom elemnt
   PubSub.publish("ActivityFormView:form-submitted", newActivity);
-  console.log('got here now...', newActivity);
+  console.log('submit form...', newActivity);
   event.target.reset();
 };
 
-
-ActivityFormView.prototype.createActivity = function(form) {
+//create new activity and publish to model "ActivityFormView:form-submitted"
+ActivityFormView.prototype.createNewActivity = function(form) {
   const newActivity = {
     description: form.description.value,
     location: form.location.value,
     type: form.type.value,
     isDone: false
-
   };
   return newActivity;
 };
